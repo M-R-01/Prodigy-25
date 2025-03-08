@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
+import { getLeaderboard, addEntry } from './leaderboard.js';
+
 
 dotenv.config();
 
@@ -34,3 +36,24 @@ app.get('/', (req, res) => {
 
     res.json(data);
 })
+
+app.get('/leaderboard', async (req, res) => {
+    try {
+      const data = await getLeaderboard();
+      data.sort((a, b) => b.score - a.score);
+      res.json(data);
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to fetch leaderboard' });
+    }
+  });
+  
+  app.post('/leaderboard', async (req, res) => {
+    try {
+        const { name, score, college_name } = req.body;
+        await addEntry(name, score, college_name);
+        res.status(201).json({ message: 'Entry added successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to add entry' });
+    }
+});
