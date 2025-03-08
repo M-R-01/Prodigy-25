@@ -1,0 +1,90 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #121212;
+    color: white;
+}
+.prodigy {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Orbitron';
+    display: none;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Orbitron';
+    transition: 0.4s ease-in-out, color 0.3s;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.navLinks li a:hover, .active {
+    color: white;
+    background: linear-gradient(90deg,rgb(72, 74, 90),rgb(17, 87, 3));
+}
+
+.socialIcons {
+    display: flex;
+    gap: 5px;
+}
+
+.socialIcons a {
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s, background 0.4s ease-in-out;
+    padding-left: 15px;
+    border-radius: 50%;
+}
+
+.socialIcons a:hover {
+    background: linear-gradient(90deg,rgb(72, 80, 91),rgb(6, 80, 45));
+    transform: scale(1.1);
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .prodigy{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #121212;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .showMenu {
+        display: flex;
+    }
+
+    .socialIcons {
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
