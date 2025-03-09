@@ -1,0 +1,174 @@
+.contactContainer {
+    text-align: center;
+    background: #000;
+    color: white;
+    padding: 40px 20px;
+    position: relative;
+  }
+  
+  .consultHeading {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: row;
+    gap:5px;  }
+  
+  .inputGroup label {
+    font-weight: bold;
+  }
+  
+  .inputGroup input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .sendButton {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .sendButton:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+  }
+  
+
+  .contactDetails {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 30px 0;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon {
+    color: #6a11cb;
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .socialIcons svg {
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .socialIcons svg:hover {
+    color: #6a11cb;
+  }
+  
+  .scrollButton {
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    padding: 8px 15px;
+    background: none;
+    transform:rotate(90deg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .scrollButton:hover {
+    background: linear-gradient(45deg,rgb(41, 42, 58),rgb(10, 111, 42));
+  }
+  
+  .gradientLine {
+    height: 32px;
+    width: 100%;
+    margin: 0 auto 5px auto;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    opacity:20%;
+  }
+  .gradientLine1 {
+    height: 4px;
+    width: 50%;
+    margin: 0 auto 5px auto;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    opacity:80%;
+  }
+  
+  @media (max-width: 768px) {
+    .contactForm {
+      flex-direction: column;
+      align-items: center;
+    }
+    .inputGroup {
+        display: flex;
+        flex-direction: column;
+        gap:5px;  }
+  
+    .contactDetails {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .socialIcons {
+      flex-direction: row;
+    }
+  
+    .scrollButton {
+     display:none;
+    }
+
+    .mobileHeading {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 40px;
+      position: relative;
+    }
+  
+    .mobileHeading::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 3px;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      margin: 10px auto 0 auto;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobileHeading {
+      display: none;
+    }
+  }
