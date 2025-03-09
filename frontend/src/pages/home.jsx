@@ -3,6 +3,7 @@ import { useState,useEffect } from "react";
 import styles from "../pages/home.module.css";
 import axios from "axios";
 import Navbar from "../components/navbar.jsx";
+import Footer from "../components/footer.jsx";
 
 const Home = () => {
     const [data, setData] = useState({})
@@ -20,6 +21,7 @@ const Home = () => {
             <Navbar/>
             <h1 className={styles.title}>Welcome to Home Page</h1>
             <p className={styles.events}>{data.Events}</p>
+            <Footer/>
         </div>
     )
 }
