@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Navbar.module.css";
+import styles from "./navbar.module.css";
 import { FaInstagram, FaFacebook, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
