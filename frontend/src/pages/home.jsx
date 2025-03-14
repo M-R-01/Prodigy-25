@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import styles from "../pages/home.module.css";
 import axios from "axios";
 import Navbar from "../components/navbar.jsx";
+import Footer from "../components/footer.jsx";
 import Card from "../components/card.jsx";
 
 const Home = () => {
@@ -68,6 +69,7 @@ const Home = () => {
         <h4 className={styles.heading}>We are ready to consult you</h4>
         <p>Space for sth if needed</p>
       </div>
+      <Footer />
     </div>
   );
 };
