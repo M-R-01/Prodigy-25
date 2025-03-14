@@ -38,16 +38,27 @@ const Home = () => {
 
       <div className={`${styles.section} ${styles.leftAlign}`}>
         <h2 className={styles.heading}>Events</h2>
-        <Card title='Events' image='images/' />
+        <div className={styles.events}>
+          <Card title='Prodigy25 Hackathon' image='images/' />
+        <Card title='Prodigy25 Hackathon' image='images/' />
+        </div>
+        
       </div>
 
       <div className={`${styles.section} ${styles.rightAlign}`}>
         <h2 className={styles.heading}>Workshops</h2>
+        <div className={styles.events}>
+          <Card title='Prodigy25 Hackathon' image='placeholder.jpeg' />
+        <Card title='Prodigy25 Hackathon' image='images/' />
+        </div>
       </div>
 
       <div className={`${styles.section} ${styles.centreAlign}`}>
         <h2 className={styles.heading}>Guest Lectures</h2>
-        <p>Space for sth if needed</p>
+        <div className={styles.events}>
+          <Card title='Prodigy25 Hackathon' image='images/' />
+        <Card title='Prodigy25 Hackathon' image='images/' />
+        </div>
       </div>
 
       <div className={`${styles.section} ${styles.centreAlign}`}>
@@ -65,10 +76,6 @@ const Home = () => {
         <p>Space for sth if needed</p>
       </div>
 
-      <div className={`${styles.section} ${styles.leftAlign}`}>
-        <h4 className={styles.heading}>We are ready to consult you</h4>
-        <p>Space for sth if needed</p>
-      </div>
       <Footer />
     </div>
   );

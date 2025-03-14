@@ -60,3 +60,11 @@
 .section {
     margin-bottom: 40px;
 }
+
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+    margin-top: 20px;
+}
