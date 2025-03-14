@@ -11,3 +11,9 @@
 }
 
 
+body {
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
