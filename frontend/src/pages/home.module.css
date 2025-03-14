@@ -1,7 +1,62 @@
-.title {
-    font-family: Orbitron;
+.heading {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
-.events {
-    font-family: Exo;
+.heading::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 0.8px;           
+    background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);
+    margin-top: 5px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menuItem {
+    padding: 10px 20px;
+    color: white;
+    font-weight: medium;
+    text-transform: uppercase;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.menuItem:last-child {
+    border-right: none;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(90deg, red, green, blue);
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.rightAlign {
+    text-align: right;
+}
+.centreAlign{
+    text-align: center;
+}
+.section {
+    margin-bottom: 40px;
 }

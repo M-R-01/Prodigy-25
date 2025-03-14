@@ -1,13 +1,13 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px;
-    background-color: #121212;
+    background-color: #000;
+    border-radius: 17px;
+    border: 2px solid #6f00a9;
     color: white;
 }
+
 .prodigy {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
     font-family: 'Orbitron';
     display: none;
@@ -15,23 +15,24 @@
 
 .navLinks {
     list-style: none;
+    width: 100%;
+    height: 100%;
     display: flex;
-    gap: 10px;
+    justify-content: space-around;
 }
 
 .navLinks li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
     font-family: 'Orbitron';
+    font-size: 16px;
     transition: 0.4s ease-in-out, color 0.3s;
-    padding: 6px 10px;
     border-radius: 5px;
 }
 
 .navLinks li a:hover, .active {
     color: white;
-    background: linear-gradient(90deg,rgb(72, 74, 90),rgb(17, 87, 3));
+    text-decoration: underline;
 }
 
 .socialIcons {
@@ -47,10 +48,6 @@
     border-radius: 50%;
 }
 
-.socialIcons a:hover {
-    background: linear-gradient(90deg,rgb(72, 80, 91),rgb(6, 80, 45));
-    transform: scale(1.1);
-}
 
 .hamburger {
     display: none;
@@ -59,10 +56,17 @@
 }
 
 @media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        padding: 0 10px 0 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .prodigy{
         display: block;
     }
+
     .hamburger {
         display: block;
     }
@@ -77,6 +81,7 @@
         width: 100%;
         padding: 20px;
         text-align: center;
+        z-index: 3;
     }
 
     .showMenu {
