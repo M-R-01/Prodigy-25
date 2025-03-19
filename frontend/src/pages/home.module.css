@@ -3,36 +3,59 @@
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem; /* 10px -> 0.625rem */
     display: inline-block;
 }
 
 .heading::after {
     content: "";
     display: block;
-    width: 200px;
-    height: 0.8px;           
-    background: linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet);
-    margin-top: 5px;
+    width: 12.5rem; /* 200px -> 12.5rem */
+    height: 0.05rem; /* 0.8px -> 0.05rem */
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    margin-top: 0.3125rem; /* 5px -> 0.3125rem */
 }
+
 .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 1.25rem; /* 20px -> 1.25rem */
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
 }
 
+@media (max-width: 46.875rem) { /* 750px -> 46.875rem */
+    .menu {
+        animation: marquee 7s linear infinite;
+        position: absolute;
+        border-top: 0.0625rem solid #fff; /* 1px -> 0.0625rem */
+        border-bottom: 0.0625rem solid #fff; /* 1px -> 0.0625rem */
+    }
+
+    .leftAlign {
+        margin-top: 4.6875rem; /* 75px -> 4.6875rem */
+    }
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -100%;
+    }
+}
+
 .menuItem {
-    padding: 10px 20px;
+    margin: 0rem 0.625rem; /* 10px -> 0.625rem */
     color: white;
     font-weight: medium;
-    text-transform: uppercase;
-    font-size: 12px;
+    font-family: Orbitron, sans-serif;
+    font-size: 0.75rem; /* 12px -> 0.75rem */
     white-space: nowrap;
+    text-align: center;
 }
 
 .menuItem:last-child {
@@ -40,11 +63,11 @@
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 0.625rem; /* 10px -> 0.625rem */
+    height: 0.625rem; /* 10px -> 0.625rem */
+    margin: 0rem 1.875rem; /* 30px -> 1.875rem */
     background: linear-gradient(90deg, red, green, blue);
     border-radius: 50%;
-    margin: 0 15px;
 }
 
 .leftAlign {
@@ -54,17 +77,11 @@
 .rightAlign {
     text-align: right;
 }
-.centreAlign{
+
+.centreAlign {
     text-align: center;
 }
-.section {
-    margin-bottom: 40px;
-}
 
-.events {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 45px;
-    margin-top: 20px;
+.section {
+    margin-bottom: 2.5rem; /* 40px -> 2.5rem */
 }

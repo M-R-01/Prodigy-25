@@ -7,6 +7,11 @@ import axios from "axios";
 import Navbar from "../components/navbar.jsx";
 import Footer from "../components/footer.jsx";
 import Card from "../components/card.jsx";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const settings = { dots: false, infinite: true, speed: 500, slidesToShow: 1, slidesToScroll: 1 };
 
 const Home = () => {
   const [data, setData] = useState({});
@@ -38,27 +43,41 @@ const Home = () => {
 
       <div className={`${styles.section} ${styles.leftAlign}`}>
         <h2 className={styles.heading}>Events</h2>
-        <div className={styles.events}>
-          <Card title='Prodigy25 Hackathon' image='images/' />
-        <Card title='Prodigy25 Hackathon' image='images/' />
-        </div>
-        
+        <Slider {...settings}>
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+        </Slider>
       </div>
 
       <div className={`${styles.section} ${styles.rightAlign}`}>
         <h2 className={styles.heading}>Workshops</h2>
-        <div className={styles.events}>
-          <Card title='Prodigy25 Hackathon' image='placeholder.jpeg' />
-        <Card title='Prodigy25 Hackathon' image='images/' />
-        </div>
+        <Slider {...settings}>
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+        </Slider>
       </div>
 
       <div className={`${styles.section} ${styles.centreAlign}`}>
         <h2 className={styles.heading}>Guest Lectures</h2>
-        <div className={styles.events}>
-          <Card title='Prodigy25 Hackathon' image='images/' />
-        <Card title='Prodigy25 Hackathon' image='images/' />
-        </div>
+        <Slider {...settings}>
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+          <Card title="Prodigy25 Hackathon" image="images/" />
+        </Slider>
       </div>
 
       <div className={`${styles.section} ${styles.centreAlign}`}>

@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 0.5rem;
-    padding: 10px;
+    padding: 0.625rem; /* 10px -> 0.625rem */
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -13,9 +13,9 @@
 .gradient::before {
     content: "";
     position: absolute;
-    inset: -5px; /* Ensures the gradient extends beyond the div */
+    inset: -0.3125rem; /* -5px -> -0.3125rem */
     border-radius: inherit;
-    padding: 5px;
+    padding: 0.3125rem; /* 5px -> 0.3125rem */
     background: #6f00a9;
     background-size: 300% 300%;
     z-index: -1;
@@ -42,19 +42,24 @@
 }
 
 .container {
-    width: 254px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.25rem;
 }
 
 .imageContainer {
     position: relative;
-    height: 365px;
+    height: 22.8125rem; /* 365px -> 22.8125rem */
     border-radius: 0.5rem;
     overflow: hidden;
     cursor: pointer;
-    border: 2px solid #6f00a9;
+    border: 0.125rem solid #6f00a9; /* 2px -> 0.125rem */
+    transition: all 0.3s ease-in-out;
+}
+
+.imageContainer:hover {
+    transform: scale(1.02);
 }
 
 .imageWrapper {
@@ -72,6 +77,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 15.875rem; /* 254px -> 15.875rem */
 }
 
 .title {
